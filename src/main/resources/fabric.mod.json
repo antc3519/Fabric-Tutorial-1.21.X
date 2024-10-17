@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "tutorial-mod",
+	"version": "${version}",
+	"name": "Tutorial Mod",
+	"description": "This is aa tutorial mod by Anthony Caruso for learning purposes!",
+	"authors": [
+		"Anthony Caruso"
+	],
+	"contact": {
+		"homepage": "https://antc3519.github.io/webPersonal/",
+		"sources": "https://github.com/antc3519/Fabric-Tutorial-1.21.X"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/tutorial-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.caruso.tutorialmod.TutorialMod"
+		],
+		"fabric-datagen": [
+			"net.caruso.tutorialmod.TutorialModDataGenerator"
+		],
+		"client": [
+			"net.caruso.tutorialmod.TutorialModClient"
+		]
+	},
+	"mixins": [
+		"tutorial-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.7",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
