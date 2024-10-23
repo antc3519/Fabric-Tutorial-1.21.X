@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "turorialmod:pink_garnet_block",
+    "turorialmod:raw_pink_garnet_block",
+    "turorialmod:pink_garnet_ore",
+    "turorialmod:pink_garnet_deepslate_ore"
+  ]
+}
