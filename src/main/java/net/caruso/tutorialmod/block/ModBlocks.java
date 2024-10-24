@@ -45,5 +45,9 @@ public class ModBlocks {
             entries.add(ModBlocks.PINK_GARNET_BLOCK);
             entries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);
         });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
+            entries.add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
+            entries.add(ModBlocks.PINK_GARNET_ORE);
+        });
     }
 }
