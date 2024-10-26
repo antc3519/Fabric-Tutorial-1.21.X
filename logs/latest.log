@@ -1,0 +1,42 @@
+[00:51:34] [main/INFO]: Loading Minecraft 1.21.1 with Fabric Loader 0.16.7
+[00:51:34] [main/INFO]: Fabric is preparing JARs on first launch, this may take a few seconds...
+[00:51:34] [main/INFO]: Loading 4 mods:
+	- fabricloader 0.16.7
+	   \-- mixinextras 0.4.1
+	- java 21
+	- minecraft 1.21.1
+[00:51:34] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/antc3/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.3+mixin.0.8.7/51ee0a44ab05f6fddd66b09e66b3a16904f9c55d/sponge-mixin-0.15.3+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
+[00:51:35] [main/WARN]: Failed to add PDH Counter: \Paging File(_Total)\% Usage, Error code: 0xC0000BB8
+[00:51:35] [main/WARN]: Failed to add counter for PDH counter: \Paging File(_Total)\% Usage
+[00:51:35] [main/WARN]: Disabling further attempts to query Paging File.
+[00:51:36] [main/WARN]: COM exception: Invalid Query: SELECT PERCENTUSAGE FROM Win32_PerfRawData_PerfOS_PagingFile
+[00:51:37] [main/ERROR]: Minecraft has crashed!
+net.fabricmc.loader.impl.FormattedException: java.lang.IllegalAccessError: class net.minecraft.registry.SimpleRegistry tried to access method 'void net.minecraft.registry.entry.RegistryEntry$Reference.setRegistryKey(net.minecraft.registry.RegistryKey)' (net.minecraft.registry.SimpleRegistry and net.minecraft.registry.entry.RegistryEntry$Reference are in unnamed module of loader 'knot' @64bf3bbf)
+	at net.fabricmc.loader.impl.FormattedException.ofLocalized(FormattedException.java:63) ~[fabric-loader-0.16.7.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:482) ~[fabric-loader-0.16.7.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) [fabric-loader-0.16.7.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotServer.main(KnotServer.java:23) [fabric-loader-0.16.7.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?]
+Caused by: java.lang.IllegalAccessError: class net.minecraft.registry.SimpleRegistry tried to access method 'void net.minecraft.registry.entry.RegistryEntry$Reference.setRegistryKey(net.minecraft.registry.RegistryKey)' (net.minecraft.registry.SimpleRegistry and net.minecraft.registry.entry.RegistryEntry$Reference are in unnamed module of loader 'knot' @64bf3bbf)
+	at knot/net.minecraft.registry.SimpleRegistry.add(SimpleRegistry.java:143) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at knot/net.minecraft.registry.SimpleDefaultedRegistry.add(SimpleDefaultedRegistry.java:26) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at knot/net.minecraft.registry.Registry.register(Registry.java:328) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at knot/net.minecraft.registry.Registry.register(Registry.java:319) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at knot/net.minecraft.registry.Registry.register(Registry.java:310) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at knot/net.minecraft.fluid.Fluids.register(Fluids.java:14) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at knot/net.minecraft.fluid.Fluids.<clinit>(Fluids.java:14) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at knot/net.minecraft.block.AbstractBlock$AbstractBlockState.<init>(AbstractBlock.java:1178) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at knot/net.minecraft.block.BlockState.<init>(BlockState.java:14) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at knot/net.minecraft.state.StateManager.method_28484(StateManager.java:64) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at java.base/java.util.stream.Streams$StreamBuilderImpl.forEachRemaining(Streams.java:411) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[?:?]
+	at knot/net.minecraft.state.StateManager.<init>(StateManager.java:57) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at knot/net.minecraft.state.StateManager$Builder.build(StateManager.java:155) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at knot/net.minecraft.block.Block.<init>(Block.java:269) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at knot/net.minecraft.block.AirBlock.<init>(AirBlock.java:18) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at knot/net.minecraft.block.Blocks.<clinit>(Blocks.java:319) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at knot/net.minecraft.block.FireBlock.registerDefaultFlammables(FireBlock.java:315) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at knot/net.minecraft.Bootstrap.initialize(Bootstrap.java:45) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at knot/net.minecraft.server.Main.main(Main.java:105) ~[minecraft-merged-b4d93de455-1.21.1-net.fabricmc.yarn.1_21_1.1.21.1+build.3-v2.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480) ~[fabric-loader-0.16.7.jar:?]
+	... 3 more
