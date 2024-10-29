@@ -2,6 +2,7 @@ package net.caruso.tutorialmod.block;
 
 import net.caruso.tutorialmod.TutorialMod;
 import net.caruso.tutorialmod.block.custom.MagicBlock;
+import net.caruso.tutorialmod.block.custom.PinkGarnetLampBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -69,6 +70,11 @@ public class ModBlocks {
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",
             new MagicBlock(AbstractBlock.Settings.create().strength(1f)));
 
+    public static final Block PINK_GARNET_LAMP = registerBlock("pink_garnet_lamp",
+            new PinkGarnetLampBlock(AbstractBlock.Settings.create()
+                    .strength(1f).requiresTool().luminance(state -> state.get(PinkGarnetLampBlock.CLICKED)? 15: 0 )));
+
+    // REGISTRIES
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, name), block);
