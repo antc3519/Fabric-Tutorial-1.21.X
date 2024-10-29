@@ -1,5 +1,6 @@
 package net.caruso.tutorialmod.item.custom;
 
+import net.caruso.tutorialmod.component.ModDataComponentTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
@@ -44,6 +45,7 @@ public class ChiselItem extends Item {
 
                 world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS);
 
+                context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
             }
         }
         return ActionResult.SUCCESS;
@@ -57,6 +59,9 @@ public class ChiselItem extends Item {
             tooltip.add(Text.translatable("tooltip.tutorialmod.chisel"));
         }
 
+        if(stack.get(ModDataComponentTypes.COORDINATES) != null) {
+            tooltip.add(Text.literal("Last block changed at" + stack.get(ModDataComponentTypes.COORDINATES)));
+        }
         super.appendTooltip(stack, context, tooltip, type);
     }
 }
